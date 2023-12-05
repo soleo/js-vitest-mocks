@@ -35,7 +35,7 @@ export class AdvancedMarkerElement
   public title: string;
   public zIndex?: number;
 
-  public addListener = jest
+  public addListener = vi
     .fn()
     .mockImplementation(
       (

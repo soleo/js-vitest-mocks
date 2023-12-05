@@ -28,11 +28,11 @@ export class LatLngAltitude implements google.maps.LatLngAltitude {
     noClampNoWrap?: boolean
   ) {}
 
-  public equals = jest
+  public equals = vi
     .fn()
     .mockImplementation((other: google.maps.LatLngAltitude): boolean => false);
 
-  public toJSON = jest
+  public toJSON = vi
     .fn()
     .mockImplementation((): google.maps.LatLngAltitudeLiteral => {
       return { lat: 0, lng: 0, altitude: 0 };

@@ -19,7 +19,7 @@
 import { __registerMockInstance } from "../../registry";
 
 export class DirectionsService implements google.maps.DirectionsService {
-  public route = jest.fn().mockImplementation(
+  public route = vi.fn().mockImplementation(
     (
       request: google.maps.DirectionsRequest,
       callback?: (

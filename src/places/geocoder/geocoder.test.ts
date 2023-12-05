@@ -28,7 +28,7 @@ test("geocoder constructor is mocked", () => {
 
 test("geocoder is mocked", () => {
   const geocoder = new google.maps.Geocoder();
-  const callback = jest.fn();
+  const callback = vi.fn();
 
   geocoder.geocode(null, callback);
 

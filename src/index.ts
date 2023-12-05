@@ -71,7 +71,7 @@ const initialize = function (): void {
   (global as any).google = {
     maps: {
       importLibrary,
-      ImageMapType: jest.fn(),
+      ImageMapType: vi.fn(),
       Marker: Marker,
       Map: Map_,
       Data: Data,

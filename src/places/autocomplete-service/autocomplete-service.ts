@@ -22,7 +22,7 @@ import { __registerMockInstance } from "../../registry";
 export class AutocompleteService
   implements google.maps.places.AutocompleteService
 {
-  public getPlacePredictions = jest.fn().mockImplementation(
+  public getPlacePredictions = vi.fn().mockImplementation(
     (
       request: google.maps.places.AutocompletionRequest,
       callback?: (
@@ -36,7 +36,7 @@ export class AutocompleteService
       })
   );
 
-  public getQueryPredictions = jest
+  public getQueryPredictions = vi
     .fn()
     .mockImplementation(
       (

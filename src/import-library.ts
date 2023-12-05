@@ -1,4 +1,4 @@
-export const importLibrary = jest.fn(async (name: string) => {
+export const importLibrary = vi.fn(async (name: string) => {
   switch (name) {
     case "core": {
       const {

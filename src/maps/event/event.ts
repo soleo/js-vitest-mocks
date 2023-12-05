@@ -15,7 +15,7 @@
  */
 
 export const MapsEventListener: google.maps.MapsEventListener = {
-  remove: jest.fn(),
+  remove: vi.fn(),
 };
 
 export class event implements google.maps.event {
@@ -24,44 +24,44 @@ export class event implements google.maps.event {
     eventName: string,
     handler: Function,
     capture?: boolean
-  ) => google.maps.MapsEventListener = jest.fn(() => MapsEventListener);
+  ) => google.maps.MapsEventListener = vi.fn(() => MapsEventListener);
 
   public static addDomListenerOnce: (
     instance: object,
     eventName: string,
     handler: Function,
     capture?: boolean
-  ) => google.maps.MapsEventListener = jest.fn(() => MapsEventListener);
+  ) => google.maps.MapsEventListener = vi.fn(() => MapsEventListener);
 
   public static addListener: (
     instance: object,
     eventName: string,
     handler: Function
-  ) => google.maps.MapsEventListener = jest.fn(() => MapsEventListener);
+  ) => google.maps.MapsEventListener = vi.fn(() => MapsEventListener);
 
   public static addListenerOnce: (
     instance: object,
     eventName: string,
     handler: Function
-  ) => google.maps.MapsEventListener = jest.fn(() => MapsEventListener);
+  ) => google.maps.MapsEventListener = vi.fn(() => MapsEventListener);
 
-  public static clearInstanceListeners: (instance: object) => void = jest.fn(
+  public static clearInstanceListeners: (instance: object) => void = vi.fn(
     () => null
   );
 
   public static clearListeners: (instance: object, eventName: string) => void =
-    jest.fn(() => null);
+    vi.fn(() => null);
 
   public static hasListeners: (instance: object, eventName: string) => boolean =
-    jest.fn(() => false);
+    vi.fn(() => false);
 
   public static removeListener: (
     listener: google.maps.MapsEventListener
-  ) => void = jest.fn(() => null);
+  ) => void = vi.fn(() => null);
 
   public static trigger: (
     instance: object,
     eventName: string,
     ...eventArgs: any[]
-  ) => void = jest.fn(() => null);
+  ) => void = vi.fn(() => null);
 }

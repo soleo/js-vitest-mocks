@@ -20,7 +20,7 @@
 import { __registerMockInstance } from "../../registry";
 
 export class PlacesService implements google.maps.places.PlacesService {
-  public findPlaceFromPhoneNumber = jest.fn().mockImplementation(
+  public findPlaceFromPhoneNumber = vi.fn().mockImplementation(
     (
       request: google.maps.places.FindPlaceFromPhoneNumberRequest,
       callback: (
@@ -31,7 +31,7 @@ export class PlacesService implements google.maps.places.PlacesService {
     ): void => {}
   );
 
-  public findPlaceFromQuery = jest.fn().mockImplementation(
+  public findPlaceFromQuery = vi.fn().mockImplementation(
     (
       request: google.maps.places.FindPlaceFromQueryRequest,
       callback: (
@@ -42,7 +42,7 @@ export class PlacesService implements google.maps.places.PlacesService {
     ): void => {}
   );
 
-  public getDetails = jest.fn().mockImplementation(
+  public getDetails = vi.fn().mockImplementation(
     (
       request: google.maps.places.PlaceDetailsRequest,
       callback: (
@@ -53,7 +53,7 @@ export class PlacesService implements google.maps.places.PlacesService {
     ): void => {}
   );
 
-  public nearbySearch = jest.fn().mockImplementation(
+  public nearbySearch = vi.fn().mockImplementation(
     (
       request: google.maps.places.PlaceSearchRequest,
       callback: (
@@ -65,7 +65,7 @@ export class PlacesService implements google.maps.places.PlacesService {
     ): void => {}
   );
 
-  public textSearch = jest.fn().mockImplementation(
+  public textSearch = vi.fn().mockImplementation(
     (
       request: google.maps.places.TextSearchRequest,
       callback: (

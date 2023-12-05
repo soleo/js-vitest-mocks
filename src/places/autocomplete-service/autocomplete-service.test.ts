@@ -28,7 +28,7 @@ test("autocomplete service is mocked", async () => {
 test("register mocks", () => {
   const autocompleteService = new google.maps.places.AutocompleteService();
 
-  const callback = jest.fn();
+  const callback = vi.fn();
 
   autocompleteService.getPlacePredictions(null);
   autocompleteService.getQueryPredictions(null, callback);

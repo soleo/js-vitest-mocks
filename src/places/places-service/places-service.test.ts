@@ -29,7 +29,7 @@ test("register mocks", () => {
 test("places service is mocked", () => {
   const placesService = new google.maps.places.PlacesService(null);
 
-  const callback = jest.fn();
+  const callback = vi.fn();
 
   placesService.findPlaceFromPhoneNumber(null, callback);
   placesService.findPlaceFromQuery(null, callback);

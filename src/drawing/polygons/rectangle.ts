@@ -21,19 +21,19 @@ export class Rectangle extends MVCObject implements google.maps.Rectangle {
   constructor(opt?: google.maps.RectangleOptions) {
     super();
   }
-  public getBounds = jest.fn(() => null);
-  public getDraggable = jest.fn(() => true);
-  public getEditable = jest.fn(() => true);
-  public getMap = jest.fn(() => new Map_(null));
-  public getVisible = jest.fn(() => true);
-  public setBounds = jest.fn(
+  public getBounds = vi.fn(() => null);
+  public getDraggable = vi.fn(() => true);
+  public getEditable = vi.fn(() => true);
+  public getMap = vi.fn(() => new Map_(null));
+  public getVisible = vi.fn(() => true);
+  public setBounds = vi.fn(
     (bounds: google.maps.LatLngBounds | google.maps.LatLngBoundsLiteral) => {}
   );
-  public setDraggable = jest.fn((draggable: boolean) => {});
-  public setEditable = jest.fn((editable: boolean) => {});
-  public setMap = jest.fn((map: google.maps.Map | null) => {});
-  public setOptions = jest.fn(
+  public setDraggable = vi.fn((draggable: boolean) => {});
+  public setEditable = vi.fn((editable: boolean) => {});
+  public setMap = vi.fn((map: google.maps.Map | null) => {});
+  public setOptions = vi.fn(
     (options: google.maps.RectangleOptions | null) => {}
   );
-  public setVisible = jest.fn((visible: boolean) => {});
+  public setVisible = vi.fn((visible: boolean) => {});
 }

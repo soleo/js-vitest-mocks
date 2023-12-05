@@ -30,7 +30,7 @@ export class PinElement
   public glyphColor?: string;
   public scale?: number;
 
-  public addListener = jest
+  public addListener = vi
     .fn()
     .mockImplementation(
       (

@@ -1,4 +1,4 @@
-# Jest Mocks for Google Maps
+# Vitest Mocks for Google Maps (Fork of Jest Mocks)
 
 [![npm](https://img.shields.io/npm/v/@googlemaps/jest-mocks)](https://www.npmjs.com/package/@googlemaps/jest-mocks)
 ![Build](https://github.com/googlemaps/js-jest-mocks/workflows/Test/badge.svg)
@@ -11,13 +11,13 @@
 
 ## Description
 
-Jest mocks for Google Maps in TypeScript.
+Vitest mocks for Google Maps in TypeScript.
 
 **Note:** If you find a missing mock, please open an [issue][issues].
 
 ## NPM
 
-Available via NPM as the package `@googlemaps/jest-mocks`
+Available via NPM as the package `@soleo/googlemap-vitest-mocks`
 
 ## Usage
 
@@ -28,7 +28,7 @@ Before running the tests, you have to call the exported `initialize`
 function to set up the global namespaces of the mocked Google Maps API:
 
 ```ts
-import { initialize } from "@googlemaps/jest-mocks";
+import { initialize } from "@soleo/google-maps-vitest-mocks";
 
 beforeEach(() => {
   initialize();
@@ -45,7 +45,7 @@ classes (e.g. `Map` or `Marker`) that can be used to retrieve, inspect and
 configure the mocks.
 
 ```ts
-import { initialize, Map, Marker, mockInstances } from "@googlemaps/jest-mocks";
+import { initialize, Map, Marker, mockInstances } from "@soleo/google-maps-vitest-mocks";
 
 // this represents your code being tested
 function codeUnderTest() {

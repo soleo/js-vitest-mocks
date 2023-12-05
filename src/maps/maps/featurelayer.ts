@@ -9,7 +9,7 @@ export class FeatureLayer implements google.maps.FeatureLayer {
     | google.maps.FeatureStyleFunction
     | null = null;
 
-  public addListener = jest.fn(
+  public addListener = vi.fn(
     (eventName: string, handler: Function): google.maps.MapsEventListener =>
       MapsEventListener
   );

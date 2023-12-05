@@ -19,7 +19,7 @@
 import { __registerMockInstance } from "../../registry";
 
 export class MaxZoomService implements google.maps.MaxZoomService {
-  public getMaxZoomAtLatLng = jest.fn().mockImplementation(
+  public getMaxZoomAtLatLng = vi.fn().mockImplementation(
     (
       latLng: google.maps.LatLng | google.maps.LatLngLiteral,
       callback?: (maxZoomResult: google.maps.MaxZoomResult) => void

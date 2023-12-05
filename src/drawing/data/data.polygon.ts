@@ -28,22 +28,22 @@ export class DataPolygon extends MVCObject implements google.maps.Data.Polygon {
   ) {
     super();
   }
-  public forEachLatLng = jest
+  public forEachLatLng = vi
     .fn()
     .mockImplementation((callback: (a: google.maps.LatLng) => void): void => {
       return null;
     });
-  public getArray = jest
+  public getArray = vi
     .fn()
     .mockImplementation(
       (): google.maps.MVCArray<google.maps.LatLng>[] =>
         [] as google.maps.MVCArray<google.maps.LatLng>[]
     );
-  public getAt = jest
+  public getAt = vi
     .fn()
     .mockImplementation(
       (): google.maps.MVCArray<google.maps.LatLng> | null => null
     );
-  public getLength = jest.fn().mockImplementation((): number => 0);
-  public getType = jest.fn().mockImplementation((): string => "MultiPolygon");
+  public getLength = vi.fn().mockImplementation((): number => 0);
+  public getType = vi.fn().mockImplementation((): string => "MultiPolygon");
 }

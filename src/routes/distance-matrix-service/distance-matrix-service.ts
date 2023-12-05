@@ -21,7 +21,7 @@ import { __registerMockInstance } from "../../registry";
 export class DistanceMatrixService
   implements google.maps.DistanceMatrixService
 {
-  public getDistanceMatrix = jest.fn().mockImplementation(
+  public getDistanceMatrix = vi.fn().mockImplementation(
     (
       request: google.maps.DistanceMatrixRequest,
       callback?: (

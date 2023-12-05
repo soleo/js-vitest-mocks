@@ -17,7 +17,7 @@
 import { __registerMockInstance } from "../../registry";
 
 export class Geocoder implements google.maps.Geocoder {
-  public geocode = jest.fn().mockImplementation(
+  public geocode = vi.fn().mockImplementation(
     (
       request: google.maps.GeocoderRequest,
       callback?: (

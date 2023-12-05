@@ -19,7 +19,7 @@
 import { __registerMockInstance } from "../../registry";
 
 export class ElevationService implements google.maps.ElevationService {
-  public getElevationAlongPath = jest.fn().mockImplementation(
+  public getElevationAlongPath = vi.fn().mockImplementation(
     (
       request: google.maps.PathElevationRequest,
       callback?: (
@@ -33,7 +33,7 @@ export class ElevationService implements google.maps.ElevationService {
       })
   );
 
-  public getElevationForLocations = jest.fn().mockImplementation(
+  public getElevationForLocations = vi.fn().mockImplementation(
     (
       request: google.maps.LocationElevationRequest,
       callback?: (
